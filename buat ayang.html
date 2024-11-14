@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesan Bucin</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #ff6b6b;
+            font-size: 24px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="bucin-text">Aku tak bisa hidup tanpamu!</div>
+
+    <script>
+        const kataCinta = [
+            "bella cantik jangan sering marah-marah y aku takut soalnya!",
+            "bella cantik jangan sering-sering ngambek y hanya karena alesan sepele.",
+            "bella kekasihku.",
+            "bella kamu semangatku.",
+            "Selamanya akan mencintaimu."
+        ];
+
+        let index = 0;
+        function tampilkanKataBucin() {
+            document.getElementById("bucin-text").innerText = kataCinta[index];
+            index = (index + 1) % kataCinta.length; // ulang dari awal jika sudah selesai
+        }
+
+        setInterval(tampilkanKataBucin, 1000); // setiap 5 detik ganti kata
+    </script>
+</body>
+</html>
